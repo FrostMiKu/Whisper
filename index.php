@@ -77,7 +77,7 @@ $this->need('header.php');
                 </section>
                 <section id="projects">
                     <span class="h1">
-                        <a <?php if($this->options->github): ?> href="<?php $this->options->github();?>" target="_blank" title="github">Projects</a>
+                        <a href="project.html">Projects</a>
                     </span>
                     <ul class="project-list">
 					<?php Projects(); ?>
