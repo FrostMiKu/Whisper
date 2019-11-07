@@ -2,7 +2,7 @@
 <div class="px3">
  <footer id="footer" style="display:block;">
             <div class="footer-left">
-                Copyright © <?php echo date('Y'); ?> By <a href="http://www.typecho.org" target="_blank" rel="nofollow">Typecho</a> & <a href="http://www.xde.io" target="_blank">Xingr</a>
+                Copyright © <?php echo date('Y'); ?> By <a href="http://www.typecho.org" target="_blank" rel="nofollow">Typecho</a> & <a href="https://blog.frostmiku.com" target="_blank">FrostMiKu</a>
             </div>
             <div class="footer-right">
                 <nav>

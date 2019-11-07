@@ -108,7 +108,7 @@ $this->need('header.php');
                 <div id="toc">
                     <nav id="TableOfContents">
                         <ul>
-							<?php if ($this->options->catalog == 'able'): ?><?php getCatalog(); ?><?php else: ?><?php theme_random_posts();?><?php endif; ?>
+							<?php if ($this->options->catalog == 'able'): ?><?php echo"<div class=\"toc\"></div>"; ?><?php else: ?><?php theme_random_posts();?><?php endif; ?>
                         </ul>
                     </nav>
                 </div>
@@ -138,8 +138,9 @@ $this->need('header.php');
                     </header>
                     <div class="content" itemprop="articleBody" id="post-content">
                         <?php $this->content(); ?>
-                        <h2>本文链接：</h2>
-                        <a href="<?php $this->permalink() ?>" target="_blank"><?php $this->permalink() ?></a>
+                        <blockquote>本文链接：
+                        	<a href="<?php $this->permalink() ?>" target="_blank"><?php $this->permalink() ?></a>
+                        </blockquote>
                     </div>
                 </article>
                  <?php $this->need('comments.php'); ?>

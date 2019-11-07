@@ -83,43 +83,38 @@ $(document).ready(function () {
   }
 });
 
-
-
-// var _mtac = {};
-//   	(function() {
-//       if(location.host!=='alili.tech')return;
-//   		var mta = document.createElement("script");
-//   		mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
-//   		mta.setAttribute("name", "MTAH5");
-//   		mta.setAttribute("sid", "500643908");
-//   		mta.setAttribute("cid", "500649335");
-//   		var s = document.getElementsByTagName("script")[0];
-//   		s.parentNode.insertBefore(mta, s);
-//   	})();
-
-// Notification.requestPermission().then(function(permission) {
-//   if(permission === 'granted'){
-//       console.log('用户允许通知');
-//   }else if(permission === 'denied'){
-//       console.log('用户拒绝通知');
-//   }
-// });
-
-//  toc 里面是a标签问题
-$(function(){
-  if($("#toc li a")){
-    $("#toc a").each(function(index){
-      var ele = $(this);
-      if(ele.attr('href').indexOf('http') != -1){
-        ele.attr('href',ele.prev().attr('href'))
-      }
-    })
-  
-    $("#TableOfContents ul").children().each(function(index){
-      if($(this).children('a').length===0){
-        $(this).addClass('no-before')
-      }
-    })
-  
-  }
-})
+if ($('.toc').length > 0) {
+    var headerEl = 'h2,h3,h4,h5',  //headers 
+        content = '.content',//文章容器
+        idArr = {};  //标题数组以确定是否增加索引id
+    //add #id
+ 
+    $(content).children(headerEl).each(function () {
+        //去除空格以及多余标点
+        var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+ 
+        headerId = headerId.toLowerCase();
+        if (idArr[headerId]) {
+            //id已经存在
+            $(this).attr('id', headerId + '-' + idArr[headerId]);
+            idArr[headerId]++;
+        }
+        else {
+            //id未存在
+            idArr[headerId] = 1;
+            $(this).attr('id', headerId);
+        }
+    });
+ 
+    tocbot.init({
+        // Where to render the table of contents.
+        tocSelector: '.toc',
+        // Where to grab the headings to build the table of contents.
+        contentSelector: content,
+        // Which headings to grab inside of the contentSelector element.
+        headingSelector: headerEl,
+        scrollSmooth: true,
+        scrollSmoothOffset: -80,
+        headingsOffset: 50
+    });
+}

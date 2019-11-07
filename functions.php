@@ -9,17 +9,17 @@ function themeConfig($form) {
     $appleicon = new Typecho_Widget_Helper_Form_Element_Text('appleicon', NULL, NULL, _t('apple touch icon地址'), _t('一般为http://www.yourblog.com/image.png,支持 https:// 或 //,留空则不设置Apple Touch Icon'));
     $form->addInput($appleicon->addRule('xssCheck', _t('请不要在图片链接中使用特殊字符')));
 	
-	$github = new Typecho_Widget_Helper_Form_Element_Text('github', NULL, NULL, _t('Github地址'), _t('一般为https://github.com/Seevil ,留空则不设置Github地址'));
+	$github = new Typecho_Widget_Helper_Form_Element_Text('github', NULL, NULL, _t('Github地址'), _t('一般为https://github.com/frostmiku ,留空则不设置Github地址'));
     $form->addInput($github->addRule('xssCheck', _t('请不要在图片链接中使用特殊字符')));
-	$twitter = new Typecho_Widget_Helper_Form_Element_Text('twitter', NULL, NULL, _t('twitter地址'), _t('一般为https://twitter.com/skyurl ,留空则不设置twitter地址'));
+	$twitter = new Typecho_Widget_Helper_Form_Element_Text('twitter', NULL, NULL, _t('twitter地址'), _t('一般为https://twitter.com/icemiku ,留空则不设置twitter地址'));
     $form->addInput($twitter->addRule('xssCheck', _t('请不要在图片链接中使用特殊字符')));
-	$weibo = new Typecho_Widget_Helper_Form_Element_Text('weibo', NULL, NULL, _t('Weibo地址'), _t('一般为http://www.weibo.com/xxx ,留空则不设置Weibo地址'));
+	$weibo = new Typecho_Widget_Helper_Form_Element_Text('weibo', NULL, NULL, _t('Weibo地址'), _t('一般为http://www.weibo.com/frostmiku ,留空则不设置Weibo地址'));
     $form->addInput($weibo->addRule('xssCheck', _t('请不要在图片链接中使用特殊字符')));
-	$urldiy = new Typecho_Widget_Helper_Form_Element_Text('urldiy', NULL, NULL, _t('主页自定义地址'), _t('注意该设置会直接输出设置内容，建议格式为\<a class="icon" href="https://twitter.com/skyurl" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a> 支持 FontAwesome 图标 ,留空则不显示'));
+	$urldiy = new Typecho_Widget_Helper_Form_Element_Text('urldiy', NULL, NULL, _t('主页自定义地址'), _t('注意该设置会直接输出设置内容，建议格式为\<a class="icon" href="https://twitter.com/icemiku" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a> 支持 FontAwesome 图标 ,留空则不显示'));
     $form->addInput($urldiy->addRule('xssCheck', _t('请不要在链接中使用特殊字符')));
 
 
-	$Projects = new Typecho_Widget_Helper_Form_Element_Textarea('Projects', NULL, NULL, _t('首页 Projects 设置（注意：切换主题会被清空，注意备份！）'), _t('按照格式输入链接信息，格式：<br><strong>链接名称（必须）|链接地址（必须）|链接描述</strong><br>不同信息之间用英文竖线“|”分隔，例如：<br><strong>XDE|http://www.xde.io/|仙岛驿站</strong><br>若中间有暂时不想填的信息，请留空，例如暂时不想填写链接描述：<br><strong>XDE|http://www.xde.io||</strong><br>多个链接换行即可，一行一个'));
+	$Projects = new Typecho_Widget_Helper_Form_Element_Textarea('Projects', NULL, NULL, _t('首页 Projects 设置（注意：切换主题会被清空，注意备份！）'), _t('按照格式输入链接信息，格式：<br><strong>链接名称（必须）|链接地址（必须）|链接描述</strong><br>不同信息之间用英文竖线“|”分隔，例如：<br><strong>StarWhisper|https://blog.frostmiku.com|星语</strong><br>若中间有暂时不想填的信息，请留空，例如暂时不想填写链接描述：<br><strong>StarWhisper|https://blog.frostmiku.com||</strong><br>多个链接换行即可，一行一个'));
 	$form->addInput($Projects);
 	
 	$catalog = new Typecho_Widget_Helper_Form_Element_Radio('catalog',
@@ -35,7 +35,7 @@ function themeInit($archive) {
         $archive->parameter->pageSize = 9; // 自定义条数
     }
 	if ($archive->is('single')) {  
-    $archive->content = createCatalog($archive->content);//文章锚点实现
+    //$archive->content = createCatalog($archive->content);//文章锚点实现
 }
 	@$comment = spam_protection_pre($comment,$post, $result);//数字验证码
 }
@@ -324,59 +324,6 @@ function compressHtml($html_source) {
         $compress .= $c;
     }
     return $compress;
-}
-
-//为文章标题添加锚点
-function createCatalog($obj) {    
-    global $catalog;
-    global $catalog_count;
-    $catalog = array();
-    $catalog_count = 0;
-    $obj = preg_replace_callback('/<h([1-6])(.*?)>(.*?)<\/h\1>/i', function($obj) {
-        global $catalog;
-        global $catalog_count;
-        $catalog_count ++;
-        $catalog[] = array('text' => trim(strip_tags($obj[3])), 'depth' => $obj[1], 'count' => $catalog_count);
-        return '<h'.$obj[1].$obj[2].'><a name="cl-'.$catalog_count.'"></a>'.$obj[3].'</h'.$obj[1].'>';
-    }, $obj);
-    return $obj;
-}
-
-//输出文章目录容器
-function getCatalog() {    
-    global $catalog;
-    $index = '';
-    if ($catalog) {
-        
-        $prev_depth = '';
-        $to_depth = 0;
-        foreach($catalog as $catalog_item) {
-            $catalog_depth = $catalog_item['depth'];
-            if ($prev_depth) {
-                if ($catalog_depth == $prev_depth) {
-                    $index .= '</li>';
-                } elseif ($catalog_depth > $prev_depth) {
-                    $to_depth++;
-                   
-                } else {
-                    $to_depth2 = ($to_depth > ($prev_depth - $catalog_depth)) ? ($prev_depth - $catalog_depth) : $to_depth;
-                    if ($to_depth2) {
-                        for ($i=0; $i<$to_depth2; $i++) {
-                            $index .= '</li>';
-                            $to_depth--;
-                        }
-                    }
-                    $index .= '</li>';
-                }
-            }
-            $index .= '<li><a href="#cl-'.$catalog_item['count'].'">'.$catalog_item['text'].'</a>';
-            $prev_depth = $catalog_item['depth'];
-        }
-        for ($i=0; $i<=$to_depth; $i++) {
-            $index .= '</li>';
-        }
-    }
-    echo $index;
 }
 
 /**

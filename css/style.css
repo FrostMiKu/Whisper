@@ -83,7 +83,9 @@ a{-webkit-tap-highlight-color:transparent}
 .content .h1,.content h1{letter-spacing:.01em;font-size:1.5em;font-style:normal;font-weight:700;color:#FF9999;margin-top:3rem;margin-bottom:1rem;display:block}
 .content .h2,.content h2,.content h3{font-size:1rem;font-weight:700;color:#262626}
 .content .h2,.content h2{position:relative;text-transform:none;letter-spacing:normal;margin-top:2rem;margin-bottom:.5rem;display:block}
-.content h4,.content h5,.content h6{font-size:.9rem;font-weight:400;color:#262626;border-bottom:1px dashed #262626;display:inline;text-decoration:none}
+.content .h3,.content h3{border-left:3px solid #ff9999;padding-left:1em}
+.content h4,.content h5,.content h6{font-size:.9rem;font-weight:400;color:#262626;border-bottom:1px dashed #262626;text-decoration:none}
+.content h5,.content h6{display:inline-block}
 .content dt,.content strong,.content th{font-weight:700}
 .content h3,.content h4,.content h5,.content h6{margin-top:.9rem;margin-bottom:.5rem}
 .content hr{border:1px dashed #ccc}
@@ -130,7 +132,8 @@ body{color:#262626;background-color:#ffffff;font-size:14px;font-weight:400;text-
 #header a,#header-post a{color:inherit;text-decoration:none}
 #header #nav,#header-post #menu-icon-tablet:hover,#header-post #menu-icon:hover,#header-post #toc a:hover,#header-post #top-icon-tablet:hover,#header-post .active,#header-post a.icon:hover{color:#FF9999}
 #header a{background:0 0}
-#header #logo{display:inline-block;float:left;margin-right:20px;width:50px;height:50px;background-repeat:no-repeat;background-size:50px 50px;border-radius:5px;-webkit-filter:grayscale(100%);filter:grayscale(100%)}
+#header #logo{display:inline-block;float:left;margin-right:20px;width:52px;height:52px;border-radius:5px}
+#header #logo div{width:50px;height:50px;background-repeat:no-repeat;background-size:50px 50px}
 #header #nav{font-size:.8rem}
 #header #nav ul{list-style-type:none;margin:0;padding:0}
 #header #nav ul a{margin-right:15px;color:color-accent}
@@ -139,7 +142,7 @@ body{color:#262626;background-color:#ffffff;font-size:14px;font-weight:400;text-
 #header #nav ul li{display:inline-block;vertical-align:middle;margin-right:15px}
 #header #nav ul .icon{display:none}
 #header #nav ul li:last-child{border-right:0}
-#header:hover #logo{-webkit-filter:none;filter:none}
+#header:hover #logo{box-shadow:0px 0px 3px rgba(0,0,0,.25)}
 @media screen and (max-width:480px){#header #title{padding-top:9px;padding-bottom:9px}
 #header #nav ul a:hover{background:0 0}
 #header #nav ul li{display:none;border-right:0}
@@ -208,13 +211,13 @@ body{color:#262626;background-color:#ffffff;font-size:14px;font-weight:400;text-
 #sociallinks li:nth-last-child(2):after{content:" and "}
 .post-list{padding:0}
 .post-list .post-item{list-style-type:none;margin-left:0;margin-bottom:1rem}
-.post-list .post-item .meta{display:block;font-size:14px;color:#666;min-width:100px;margin-right:16px}
+.post-list .post-item .meta{display:block;font-size:14px;color:#888888;min-width:100px;margin-right:16px}
 .description{min-height:105px}
 @media (min-width:480px){p{text-align:justify}
 .post-list .post-item{display:flex;margin-bottom:5px}
 .post-list .post-item .meta{text-align:left}
 }
-.project-list .project-item{margin-bottom:5px}
+.project-list .project-item{margin-bottom:5px;color:#888888}
 article header .posttitle{margin-top:0;margin-bottom:0.25em;text-transform:none;font-size:1.75em;line-height:1.25}
 article header .meta{margin-top:0;margin-bottom:1rem}
 article header .meta *{color:#888888;font-size:.85rem}
@@ -225,8 +228,9 @@ article .content img,article .content video{max-width:100%;height:auto;display:b
 article .content .video-container{position:relative;padding-top:56.25%;height:0;overflow:hidden}
 .highlight,.hljs,pre{overflow-x:auto}
 article .content .video-container embed,article .content .video-container iframe,article .content .video-container object{position:absolute;top:0;left:0;width:100%;height:100%;margin-top:0}
-article .content blockquote{margin: 2em 0;padding: 10px 20px;position: relative;color: #888888;background-color: rgba(192,91,77,.05);border-left: 3px solid rgba(192,91,77,.3);-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.125);box-shadow: 1px 1px 2px rgba(0,0,0,.125)}
+article .content blockquote{margin:2em 0;padding:10px 20px;position:relative;color:#888888;background-color:rgba(192,91,77,.05);border-left:3px solid rgba(192,91,77,.3);-webkit-box-shadow:1px 1px 2px rgba(0,0,0,.125);box-shadow:1px 1px 2px rgba(0,0,0,.125)}
 article .content blockquote p{margin:0}
+article .content blockquote a{color:#888888;background-image:none}
 article .content blockquote footer{color:#666;font-size:11px;margin:line-height 0}
 article .content blockquote footer a{color:#666;background-image:linear-gradient(transparent,transparent 5px,#666 5px,#666)}
 article .content blockquote footer a:hover{color:#999;background-image:linear-gradient(transparent,transparent 4px,#999 4px,#999)}

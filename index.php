@@ -1,10 +1,10 @@
 <?php
 /**
- * 仙人掌(Cactus)是优雅简洁的暗色主题
- * @package Cactus Theme
- * @author Intern
- * @version 1.2.0
- * @link https://www.xde.io/
+ * Whisper 是优雅简洁、专注阅读的亮色主题
+ * @package Whisper Theme
+ * @author FrostMiKu
+ * @version 1.0.0
+ * @link https://blog.frostmiku.com/
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
@@ -14,9 +14,9 @@ $this->need('header.php');
         <div class="content index width mx-auto px3 my4">
             <header id="header">
 			<?php $today = today(); ?>
-                <a href="<?php $this->options->siteUrl();?>">
-                     <div id="logo" style="background-image: url(<?php if($this->options->logoimg): ?><?php $this->options->logoimg();?><?php else : ?><?php $this->options->themeUrl('images/logo.png'); ?><?php endif; ?>);"></div>
-                     </a>
+                <a id="logo" href="<?php $this->options->siteUrl();?>">
+                     <div style="background-image: url(<?php if($this->options->logoimg): ?><?php $this->options->logoimg();?><?php else : ?><?php $this->options->themeUrl('images/logo.png'); ?><?php endif; ?>);"></div>
+                </a>
                     <div id="title">
                         <h1><?php $this->options->title(); ?></h1>
                     </div>
@@ -77,7 +77,7 @@ $this->need('header.php');
                 </section>
                 <section id="projects">
                     <span class="h1">
-                        <a href="project.html">Projects</a>
+                        <a <?php if($this->options->github): ?>href="<?php $this->options->github();?>" target="_blank"<?php endif; ?>>Projects</a>
                     </span>
                     <ul class="project-list">
 					<?php Projects(); ?>
