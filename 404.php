@@ -33,7 +33,7 @@ $this->need('header.php');
             <section id="wrapper" class="home">
                 <section id="about">
                     <div class="description coding">
-                        <span class="typed prompt">[root@<?php $this->options->title(); ?>]# echo url<br/>> 404 - <?php _e('页面没找到'); ?> </span>
+                    <span class="typed prompt">[root@<?php $this->options->title(); ?>]# echo url<br/>> 404 - <?php _e('页面没找到耶┐(ﾟ～ﾟ)┌'); ?> </span>
                     </div>
                 </section>       
             </section>

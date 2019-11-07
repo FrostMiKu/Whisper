@@ -1,8 +1,8 @@
 {
-    "name": "仙岛驿站",
-    "short_name": "仙岛驿站",
-    "theme_color": "#1d1f21",
-    "background_color": "#1d1f21",
+    "name": "StarWhisper",
+    "short_name": "StarWhisper",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "display": "standalone",
     "Scope": "/",
     "start_url": "/",

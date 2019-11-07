@@ -16,7 +16,7 @@ $this->need('header.php');
 			<?php $today = today(); ?>
                 <a href="<?php $this->options->siteUrl();?>">
                      <div id="logo" style="background-image: url(<?php if($this->options->logoimg): ?><?php $this->options->logoimg();?><?php else : ?><?php $this->options->themeUrl('images/logo.png'); ?><?php endif; ?>);"></div>
-					 </a>
+                     </a>
                     <div id="title">
                         <h1><?php $this->options->title(); ?></h1>
                     </div>
@@ -60,7 +60,7 @@ $this->need('header.php');
                 </section>
                 <section id="writing">
                     <span class="h1">
-                        <a href="archives.html">Writing</a>
+                        <a href="archive.html">Writing</a>
                     </span>
                     <ul class="post-list" id="post-list">
 					<?php while($this->next()): ?>
@@ -77,7 +77,7 @@ $this->need('header.php');
                 </section>
                 <section id="projects">
                     <span class="h1">
-                        <a href="#" rel="external nofollow noopener noreferrer" target="_blank">Projects</a>
+                        <a <?php if($this->options->github): ?> href="<?php $this->options->github();?>" target="_blank" title="github">Projects</a>
                     </span>
                     <ul class="project-list">
 					<?php Projects(); ?>

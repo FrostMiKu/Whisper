@@ -68,7 +68,7 @@ function Projects($sorts = NULL) {
             }
         }
     }
-    echo $Project ? $Project : '世间无限丹青手，一片伤心画不成。';
+    echo $Project ? $Project : '醉后不知天在水，满船清梦压星河。';
 }
 
 /**阅读浏览次数 
