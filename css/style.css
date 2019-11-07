@@ -88,7 +88,7 @@ a{-webkit-tap-highlight-color:transparent}
 .content h5,.content h6{display:inline-block}
 .content dt,.content strong,.content th{font-weight:700}
 .content h3,.content h4,.content h5,.content h6{margin-top:.9rem;margin-bottom:.5rem}
-.content hr{border:1px dashed #ccc}
+.content hr{border:1px solid #f5f6f7}
 #header #nav ul li,#header-post #nav ul li{border-right:1px dotted #FF9999}
 .content cite,.content em{font-style:italic}
 .content sub,.content sup{font-size:.75em;line-height:0;position:relative;vertical-align:baseline}
@@ -107,8 +107,8 @@ html{height:100%}
 body{color:#262626;background-color:#ffffff;font-size:14px;font-weight:400;text-rendering:geometricPrecision;min-height:100%;display:flex;flex-direction:column}
 .content{flex:1}
 .content p{-moz-hyphens:auto;-ms-hyphens:auto;-webkit-hyphens:auto;hyphens:auto;margin-bottom:.5rem;word-break:break-all}
-.content p code{color:#ff9999;padding:0}
-.content code,.content pre{-moz-hyphens:manual;-ms-hyphens:manual;-webkit-hyphens:manual;hyphens:manual;margin-bottom:.5rem}
+.content p code{color:#ff9999;padding:0 5px;margin:0 0.5em}
+.content code,.content pre{-moz-hyphens:manual;-ms-hyphens:manual;-webkit-hyphens:manual;hyphens:manual;margin-bottom:.5rem;color:#ff9999;background-color:#f5f6f7}
 .content a{text-decoration:none;color:#262626;word-wrap:break-word;background-repeat:repeat-x;background-position:bottom;background-size:100% 6px;background-image:linear-gradient(transparent,transparent 5px,#ff9999 5px,#ff9999)}
 .content a:hover{color:#ff9999;background-image:linear-gradient(transparent,transparent 5px,#ff9999 5px,#ff9999)}
 .content a.icon{background:0 0}
