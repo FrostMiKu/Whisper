@@ -295,10 +295,10 @@ article .content .caption{color:color-grey;display:block;font-size:.9em;margin-t
 .highlight .code .deletion{color:#dc322f}
 .highlight .code .formula{background:#eee8d5}
 .highlight .code .attr,.highlight .code .attribute{color:#81a2be}
-pre{font-size:13px;padding:10px 15px 0;line-height:22px;-webkit-border-radius:4px;border-radius:4px;background-color:#232527}
+pre{font-size:13px;padding:10px 15px 0;line-height:22px;-webkit-border-radius:4px;border-radius:4px;background-color:#f5f6f7;box-shadow:0px 0px 5px rgba(0,0,0,.25)}
 code{-webkit-border-radius:2px;border-radius:2px;padding:0 5px;font-family:Menlo,"Meslo LG","Helvetica Neue",Helvetica,"Microsoft yahei",Arial,sans-serif,monospace}
 pre code{border:none;display:block;padding:0}
-.hljs{display:block;overflow-x:auto;padding:.5em;color:#d1d9e1}
+.hljs{display:block;overflow-x:auto;padding:.5em;color:#262626}
 .hljs-comment,.hljs-quote{color:#969896;font-style:italic}
 .hljs-addition,.hljs-keyword,.hljs-literal,.hljs-selector-tag,.hljs-type{color:#c9c}
 .hljs-number,.hljs-selector-attr,.hljs-selector-pseudo{color:#f99157}
