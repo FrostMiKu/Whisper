@@ -3,7 +3,7 @@
  * Whisper 是优雅简洁、专注阅读的亮色主题
  * @package Whisper Theme
  * @author FrostMiKu
- * @version 1.0.0
+ * @version 1.0.2
  * @link https://blog.frostmiku.com/
  */
 
@@ -17,9 +17,9 @@ $this->need('header.php');
                 <a id="logo" href="<?php $this->options->siteUrl();?>">
                      <div style="background-image: url(<?php if($this->options->logoimg): ?><?php $this->options->logoimg();?><?php else : ?><?php $this->options->themeUrl('images/logo.png'); ?><?php endif; ?>);"></div>
                 </a>
-                    <div id="title">
-                        <h1><?php $this->options->title(); ?></h1>
-                    </div>
+                <div id="title">
+                    <h1><?php $this->options->title(); ?></h1>
+                </div>
                 <div id="nav">
                     <ul>
                         <li class="icon">
@@ -60,7 +60,7 @@ $this->need('header.php');
                 </section>
                 <section id="writing">
                     <span class="h1">
-                        <a href="archive.html">Writing</a>
+                        <a href="archives.html">Writing</a>
                     </span>
                     <ul class="post-list" id="post-list">
 					<?php while($this->next()): ?>

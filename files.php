@@ -10,12 +10,12 @@ $this->need('header.php');
    <body>
         <div class="content index width mx-auto px3 my4">
             <header id="header">
-                <a href="<?php $this->options->siteUrl();?>">
-                    <div id="logo" style="background-image: url(<?php if($this->options->logoimg): ?><?php $this->options->logoimg();?><?php else : ?><?php $this->options->themeUrl('images/logo.png'); ?><?php endif; ?>);"></div>
-                    <div id="title">
-                        <h1>Archives</h1>
-                    </div>
-                </a>
+                <a id="logo" href="<?php $this->options->siteUrl();?>">
+                    <div style="background-image: url(<?php if($this->options->logoimg): ?><?php $this->options->logoimg();?><?php else : ?><?php $this->options->themeUrl('images/logo.png'); ?><?php endif; ?>);"></div>
+                </a>    
+                <div id="title">
+                    <h1>Archives</h1>
+                </div>
                 <div id="nav">
                     <ul>
                         <li class="icon">
