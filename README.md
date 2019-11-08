@@ -18,4 +18,12 @@
 
 3. 修改 Whisper/manifest.json 文件
 
+## 如何更新
+
+1. 下载最新的 release 
+
+2. 覆盖替换 usr/themes/Whisper
+
+3. 修改 Whisper/manifest.json 文件
+
 完...
