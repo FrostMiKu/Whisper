@@ -3,6 +3,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $this->need('header.php');
 ?>
     <body>
+        <script src="<?php $this->options->themeUrl('js/tocbot.min.js'); ?>"></script>
+        <link rel="stylesheet" href="<?php $this->options->themeUrl('css/tocbot.css'); ?>">
         <div id="header-post">
             <a id="menu-icon" href="#">
                 <i class="fa fa-bars fa-lg"></i>
@@ -105,14 +107,14 @@ $this->need('header.php');
                         </li>
                     </ul>
                 </div>
-                <div id="toc">
-                    <nav id="TableOfContents">
-                        <ul>
-							<?php if ($this->options->catalog == 'able'): ?><?php echo"<div class=\"toc\"></div>"; ?><?php else: ?><?php theme_random_posts();?><?php endif; ?>
-                        </ul>
-                    </nav>
-                </div>
             </span>
+        </div>
+        <div id="toc">
+            <nav id="TableOfContents">
+                <ul>
+					<?php if ($this->options->catalog == 'able'): ?><?php echo"<div class=\"toc\"></div>"; ?><?php else: ?><?php theme_random_posts();?><?php endif; ?>
+                </ul>
+            </nav>
         </div>
         <div class="content index width mx-auto px3 my3">
             <section id="wrapper" class="home">
