@@ -114,7 +114,7 @@ if ($('.toc').length > 0) {
         // Which headings to grab inside of the contentSelector element.
         headingSelector: headerEl,
         scrollSmooth: true,
-        scrollSmoothOffset: -80,
-        headingsOffset: 50
+        scrollSmoothOffset: 0,
+        headingsOffset: 100
     });
 }
