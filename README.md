@@ -6,6 +6,8 @@
 
 本项目 fork 自 https://github.com/Seevil/cactus
 
+（ update：github 不统计 fork 的贡献，重新创建仓库了。老仓库转移至 [OpenZZULI](https://github.com/openzzuli/Whisper) ）
+
 个人修改使用，因其开源协议为 GPL 索性就把修改后的做成一个主题开源了。
 
 ![preview](https://github.com/FrostMiKu/Whisper/blob/master/screenshot.png?raw=true)
