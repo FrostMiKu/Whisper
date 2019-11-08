@@ -1,6 +1,6 @@
 @font-face{font-family:'Meslo LG';font-style:normal;src:local('Meslo LG S'),url(../lib/meslo-LG/fonts/MesloLGS-Regular.woff) format('woff')}
 ::-webkit-scrollbar{width:6px;height:6px}
-::-webkit-scrollbar-thumb{background:#4a4a4a}
+::-webkit-scrollbar-thumb{background:rgba(0,0,0,.125)}
 a{-webkit-tap-highlight-color:transparent}
 .ml0,.mx0{margin-left:0}
 .mr0,.mx0{margin-right:0}
@@ -81,11 +81,14 @@ a{-webkit-tap-highlight-color:transparent}
 .pr4,.px4{padding-right:4rem}
 .p4{padding:4rem}
 .content .h1,.content h1{letter-spacing:.01em;font-size:1.5em;font-style:normal;font-weight:700;color:#FF9999;margin-top:3rem;margin-bottom:1rem;display:block}
-.content .h2,.content h2,.content h3{font-size:1rem;font-weight:700;color:#262626}
+.content .h2,.content h2,.content h3,.content h4{font-size:1rem;font-weight:700;color:#262626}
 .content .h2,.content h2{position:relative;text-transform:none;letter-spacing:normal;margin-top:2rem;margin-bottom:.5rem;display:block}
-.content .h3,.content h3{border-left:3px solid #ff9999;padding-left:1em}
-.content h4,.content h5,.content h6{font-size:.9rem;font-weight:400;color:#262626;border-bottom:1px dashed #262626;text-decoration:none}
+.content .h3,.content h3{border-left:3px solid #ff9999;padding-left:0.5em}
+.content h4{padding-left:0.5em}
+.content h5,.content h6{font-size:.9rem;font-weight:600;color:#262626;text-decoration:none}
 .content h5,.content h6{display:inline-block}
+.content h5{border-bottom:1px solid #ff9999;border-top:1px solid #ff9999;font-style:italic}
+.content h6{border-bottom:1px dashed #262626}
 .content dt,.content strong,.content th{font-weight:700}
 .content h3,.content h4,.content h5,.content h6{margin-top:.9rem;margin-bottom:.5rem}
 .content hr{border:1px solid #f5f6f7}
