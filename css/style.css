@@ -266,7 +266,7 @@ article .content .caption{color:color-grey;display:block;font-size:.9em;margin-t
 .blog-post-comments.v .vempty pre{color:#555}
 .blog-post-comments.v .vlist .vcard .vh .vmeta .vat,.blog-post-comments.v .vlist .vcard .vhead .vnick:hover{color:#ff9999}
 .blog-post-comments.v .vlist .vcard .vquote{border-left:1px dashed #2a2c2f}
-.blog-post-comments.v .vlist .vcard .vh{border-bottom:1px dashed #2a2c2f}
+.blog-post-comments.v .vlist .vcard .vh{border-bottom:1px solid #f5f6f7}
 .blog-post-comments.v .vlist .vcard .vhead .vsys{background:0 0}
 .pagination a,.pagination a:hover{background-image:none}
 #footer,#footer a{color:#888888}
