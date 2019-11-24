@@ -3,7 +3,7 @@
  * Whisper 是优雅简洁、专注阅读的亮色主题
  * @package Whisper Theme
  * @author FrostMiKu
- * @version 1.1.1
+ * @version 1.2.0
  * @link https://blog.frostmiku.com/
  */
 

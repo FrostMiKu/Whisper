@@ -2,7 +2,7 @@
 
 ⭐一个响应式干净和简洁优雅的 Typecho 主题
 
-[预览](https://blog.frostmiku.com/) | [样式一览](https://blog.frostmiku.com/post/10/)
+[预览](https://blog.frostmiku.com/) | [样式一览](https://blog.frostmiku.com/archives/10/)
 
 本项目 fork 自 https://github.com/Seevil/cactus
 

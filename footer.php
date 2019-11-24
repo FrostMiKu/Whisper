@@ -47,32 +47,35 @@ $(function () {
     }
     var typed = new Typed(".description .typed", options);
   })
-});</script>
+});
+</script>
 		<?php endif; ?>
 		<?php if ($this->is('post')) : ?>
 		<link rel="stylesheet" href="<?php $this->options->themeUrl('css/lightbox.min.css'); ?>">
 		<script src="<?php $this->options->themeUrl('js/lightbox.min.js'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('js/pangu.min.js'); ?>"></script>
 		<script src="<?php $this->options->themeUrl('lib/highlight.min.js'); ?>"></script>
 		<script>
-		$('#post-content img').wrap(function () {
-		return '<a href="' + this.src + '" title="' + this.alt + '" data-lightbox="roadtrip"></a>';
-		});
+      $('#post-content img').wrap(function () {
+      return '<a href="' + this.src + '" title="' + this.alt + '" data-lightbox="roadtrip"></a>';
+      });
 		</script>
-        <script>
-            hljs.initHighlightingOnLoad();
-        </script>
-       <?php endif; ?>
-        <script>
-			if ('serviceWorker' in navigator) {
-			  window.addEventListener('load', function() {
-				navigator.serviceWorker.register('<?php $this->options->themeUrl('/sw.js'); ?>').then(function(registration) {
-				  console.log('ServiceWorker registration successful with scope: ', registration.scope);
-				}, function(err) {
-				  console.log('ServiceWorker registration failed: ', err);
-				});
-			  });
-			}
-        </script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+    <?php endif; ?>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+        navigator.serviceWorker.register('<?php $this->options->themeUrl('/sw.js'); ?>').then(function(registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+        });
+      }
+    </script>
+    <script>pangu.spacingPage();</script>
 		<?php $this->footer(); ?>
     </body>
 </html>
