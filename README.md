@@ -35,4 +35,6 @@
 
 ![preview2](https://github.com/FrostMiKu/Whisper/blob/master/preview2.png?raw=true)
 
+![preview3](https://github.com/FrostMiKu/Whisper/blob/master/preview3.png?raw=true)
+
 完...
