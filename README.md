@@ -10,7 +10,9 @@
 
 个人修改使用，因其开源协议为 GPL 索性就把修改后的做成一个主题开源了。
 
-![preview](https://github.com/FrostMiKu/Whisper/blob/master/screenshot.png?raw=true)
+![screenshot](https://github.com/FrostMiKu/Whisper/blob/master/screenshot.png?raw=true)
+
+![preview](https://github.com/FrostMiKu/Whisper/blob/master/preview.png?raw=true)
 
 ## 如何使用
 
