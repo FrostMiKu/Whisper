@@ -12,7 +12,6 @@
 
 ![screenshot](https://github.com/FrostMiKu/Whisper/blob/master/screenshot.png?raw=true)
 
-![preview](https://github.com/FrostMiKu/Whisper/blob/master/preview.png?raw=true)
 
 ## 如何使用
 
@@ -29,5 +28,11 @@
 2. 覆盖替换 usr/themes/Whisper
 
 3. 修改 Whisper/manifest.json 文件
+
+## Preview
+
+![preview](https://github.com/FrostMiKu/Whisper/blob/master/preview.png?raw=true)
+
+![preview2](https://github.com/FrostMiKu/Whisper/blob/master/preview2.png?raw=true)
 
 完...
