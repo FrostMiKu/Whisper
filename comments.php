@@ -53,7 +53,7 @@ function threadedComments($comments, $options) {
 <div class="blog-post-comments v" id="<?php $this->respondId(); ?>">
 <form  method="post" action="<?php $this->commentUrl() ?>" id="comment-form">
 	<?php if($this->user->hasLogin()): ?>
-	<?php _e('登录身份: '); ?><h6><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a></h6>
+	<?php _e('登录身份: '); ?><a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout"><?php _e('退出'); ?> &raquo;</a>
 	<div class="vwrap">
 		<div class="vheader item3">
 		</div>

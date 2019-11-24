@@ -81,14 +81,14 @@ a{-webkit-tap-highlight-color:transparent}
 .pr4,.px4{padding-right:4rem}
 .p4{padding:4rem}
 .content .h1,.content h1{letter-spacing:.01em;font-size:1.5em;font-style:normal;font-weight:700;color:#FF9999;margin-top:3rem;margin-bottom:1rem;display:block}
-.content .h2,.content h2,.content h3,.content h4{font-size:1rem;font-weight:700;color:#262626}
-.content .h2,.content h2{position:relative;text-transform:none;letter-spacing:normal;margin-top:2rem;margin-bottom:.5rem;display:block}
-.content .h3,.content h3{border-left:3px solid #ff9999;padding-left:0.5em}
-.content h4{padding-left:0.5em}
+.content .h2,.content h2,.content h3,.content h4{font-weight:700;color:#262626;position:relative;text-transform:none;letter-spacing:normal;margin-top:2rem;margin-bottom:.5rem;display:block}
+.content .h2,.content h2{font-size:1.3rem;}
+.content .h3,.content h3{font-size:1.1rem;}
+.content h4{font-size:1rem;}
 .content h5,.content h6{font-size:.9rem;font-weight:600;color:#262626;text-decoration:none}
-.content h5,.content h6{display:inline-block}
+.content h5,.content h6{width:fit-content}
 .content h5{border-bottom:1px solid #ff9999;border-top:1px solid #ff9999;font-style:italic}
-.content h6{border-bottom:1px dashed #262626}
+.content h6{margin-left: -2rem;padding:0 5px;color:#FF3333;background-color:#f5f6f7;box-shadow:1px 1px 2px rgba(0,0,0,.125);border-radius:3px;}
 .content dt,.content strong,.content th{font-weight:700}
 .content h3,.content h4,.content h5,.content h6{margin-top:.9rem;margin-bottom:.5rem}
 .content hr{border:1px solid #f5f6f7}
@@ -233,7 +233,9 @@ article header .meta{margin-top:0;margin-bottom:1rem}
 article header .meta *{color:#888888;font-size:.85rem}
 article header .author{text-transform:uppercase;letter-spacing:.01em;font-weight:700}
 article header .postdate{display:inline}
-article .content h2:before{content:"\00B6";color:#ff9999;position:absolute;left:-1rem;top:-4px;font-size:1.2rem;font-weight:700}
+article .content h2:before{content:"\00A7";color:#ff9999;position:absolute;left:-1rem;top:-4px;font-size:1.5rem;font-weight:700}
+article .content h3:before{content:"\00B6";color:#ff9999;position:absolute;left:-1rem;top:-4px;font-size:1.3rem;font-weight:700}
+article .content h4:before{content:"#";color:#ff9999;position:absolute;left:-1rem;top:-2px;font-size:1.1rem;font-weight:700}
 article .content img,article .content video{max-width:100%;height:auto;display:block;margin:auto}
 article .content .video-container{position:relative;padding-top:56.25%;height:0;overflow:hidden}
 .highlight,.hljs,pre{overflow-x:auto}
