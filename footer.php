@@ -5,17 +5,7 @@
                 Copyright © <?php echo date('Y'); ?> By <a href="http://www.typecho.org" target="_blank" rel="nofollow">Typecho</a> & <a href="https://blog.frostmiku.com" target="_blank">FrostMiKu</a>
             </div>
             <div class="footer-right">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="<?php $this->options->siteUrl();?>">Home</a>
-                        </li>
-                        <?php $this->widget('Widget_Contents_Page_List')->parse('<li><a href="{permalink}">{title}</a></li>'); ?>
-                        <?php if($this->options->github): ?><li>
-                            <a href="<?php $this->options->github();?>" target="_blank">Github</a>
-                        </li><?php endif; ?>
-                    </ul>
-                </nav>
+                <a href="http://beian.miit.gov.cn" style="text-decoration:none;">X ICP 备 xxxxxxx 号</a>
             </div>
         </footer>
 		</div>
