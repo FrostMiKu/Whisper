@@ -5,7 +5,7 @@
                 Copyright © <?php echo date('Y'); ?> By <a href="http://www.typecho.org" target="_blank" rel="nofollow">Typecho</a> & <a href="https://blog.frostmiku.com" target="_blank">FrostMiKu</a>
             </div>
             <div class="footer-right">
-                <a href="http://beian.miit.gov.cn" style="text-decoration:none;">X ICP 备 xxxxxxx 号</a>
+                <a href="http://beian.miit.gov.cn" target="_blank" rel="nofollow" style="text-decoration:none;">X ICP 备 xxxxxxx 号</a>
             </div>
         </footer>
 		</div>
